@@ -11,12 +11,18 @@ void input::str_tolower(char t[], char nt[])
     }
     nt[l] = '\0';
 }
-template <class T>
+
+template<typename T>
 void input::read_values(ifstream &fin, T &var)
 {
     fin >> var;
     fin.ignore(100, '\n');
 }
+//Note: for g++ O2/O3, we need to declare all possbile functions from template function.
+//In this case, we only need to give instances used in grid.cpp, not in input.cpp itself.
+//If not,there will be 'undefined reference' error.
+template void input::read_values<int>(ifstream &fin,int &var);
+template void input::read_values<double>(ifstream &fin,double &var);
 void input::essential_para_init()
 {
     lx = 0;

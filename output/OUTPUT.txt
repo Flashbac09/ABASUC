@@ -2,6 +2,14 @@
 2/10: Generate uniform grid.   -->Success.
 3/10: Read in V energy.   -->Success.
 4/10: Read in fixed points.   -->Success.
-5/10: Read in Radius Distribution Function(RDF).   -->Success.
-6/10: Calculate Integral for H elements.(2*2)
-7/10: Construct H.   -->Done.
+5/10: Read in Radius Distribution Function(RDF).
+Warning: RDF cutoff is quite inconsistent with grid.
+   -->Success.
+6/10: Cubic spline interpolation for RDF.   -->Done.
+7/10: Calculate Integral for H elements(2*2).
+8/10: Construct H.   -->Done.
+Eigenvalues: 
+2.63258   4.4956   
+Eigenvectors: 
+-1 2.36169e-10 
+2.36169e-10 1 

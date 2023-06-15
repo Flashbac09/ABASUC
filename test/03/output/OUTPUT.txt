@@ -1,0 +1,10 @@
+1/10: Read in parameters & generate cuboid model.   -->Success.
+2/10: Generate uniform grid.   -->Success.
+3/10: Read in V energy.   -->Success.
+4/10: Read in fixed points.   -->Success.
+5/10: Read in Radius Distribution Function(RDF).
+Warning: RDF cutoff is quite inconsistent with grid.
+   -->Success.
+6/10: Cubic spline interpolation for RDF.   -->Done.
+7/10: Calculate Integral for H elements(2*2).
+8/10: Construct H.   -->Done.

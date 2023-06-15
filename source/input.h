@@ -1,6 +1,6 @@
 #ifndef _INPUT_H_
 #define _INPUT_H_
-#include"global.h"
+#include "global.h"
 class input
 {
 public:
@@ -26,11 +26,12 @@ public:
     void input_distribution(const string &file_distribution, ofstream &fout);
     void input_points(const string &file_points, ofstream &fout);
     void input_venergy(const string &file_venergy, ofstream &fout);
-    template <class T>
-    static void read_values(ifstream &fin, T &var);
     void generate_uniform_grid(const string &file_venergy, ofstream &fout);
     void essential_para_init();
     bool essential_para_check();
+    //
+    template <typename T>
+    static void read_values(ifstream &fin, T &var);
 };
 
 #endif

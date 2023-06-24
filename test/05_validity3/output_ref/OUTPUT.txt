@@ -1,0 +1,16 @@
+                            ABASUC v0.1
+-----Assignment Based Atomic Solver of Unreliable Computation-----
+       Repository: https://github.com/Flashbac09/ABASUC
+
+1/10: Read in parameters & generate cuboid model.   -->Success.
+2/10: Generate uniform grid.   -->Success.
+3/10: Read in V energy.   -->Success.
+4/10: Read in fixed points.   -->Success.
+5/10: Read in Radius Distribution Function(RDF).   -->Success.
+6/10: Cubic spline interpolation for RDF.   -->Done.
+7/10: Calculate Integral for H elements(2*2).
+8/10: Construct H.   -->Done.
+9/10: Solve eigenpairs of H.   -->Done.
+10/10: Output and finalize.
+
+-----Check complete output in folder "output"-----

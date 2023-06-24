@@ -12,7 +12,7 @@ public:
     int n_fixed;
     double d;                                     // side length of blocks, if it's strict uniform(cube).
     double d1,d2,d3;//uniform on one dimension, cuboid for meshes.
-    double x[55] = {0}, y[55] = {0}, z[55] = {0}; // fixed points
+    double x[MAX_SPHERE] = {0}, y[MAX_SPHERE] = {0}, z[MAX_SPHERE] = {0}; // fixed points
     double rdf_cutoff;
     double dr;  // rdf Discretization distance
     int mesh;   // rdf Discretization number

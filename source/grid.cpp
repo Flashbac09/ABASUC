@@ -17,10 +17,16 @@ bool grid::good_grid_condition()
 }
 bool grid::good_fixed_points(int n_fixed)
 {
+    int near_bound=0;
     for(int i=0;i<n_fixed;++i)
     {
         if(x[i]<0||x[i]>lx||y[i]<0||y[i]>ly||z[i]<0||z[i]>lz)
         return 0;
+        /*
+        if(lx-x[i]<((double)lx/nx)||ly-y[i]<((double)ly/ny)||lz-z[i]<((double)lz/nz))
+        cout<<"\nWarning: Points near the boundary may have conflict with non-periodic conditions.";
+        fout<<"\nWarning: Points near the boundary may have conflict with non-periodic conditions.";
+        */
     }
     return 1;
 }
@@ -87,6 +93,7 @@ void grid::read_fixed_points(const string &file_points, ofstream &fout)
     fout << "   -->Success." << endl;
     cu_steps += 1;
 }
+
 void grid::read_venergy_and_construct(input &I1, ofstream &fout)
 {
     // 1:grid
@@ -245,6 +252,10 @@ void grid::read_distribution(const string &file_distribution, ofstream &fout)
         fout << "   ->Error, lack necessary RDF parameter." << endl;
         exit(1);
     }
+    //we may check the radius of spheres.Several points should be there at least.
+    if(rdf_cutoff<d1||rdf_cutoff<d2||rdf_cutoff<d3)
+    cout<<"\nWarning: RDF cutoff is quite inconsistent with grid.\n";
+    fout<<"\nWarning: RDF cutoff is quite inconsistent with grid.\n";
     cout << "   -->Success." << endl;
     fout << "   -->Success." << endl;
     cu_steps += 1;
